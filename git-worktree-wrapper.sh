@@ -18,7 +18,7 @@ set -uo pipefail
 
 # Detect shell type (bash or zsh)
 IS_ZSH=false
-if [ -n "$ZSH_VERSION" ]; then
+if [ -n "${ZSH_VERSION-}" ]; then
   IS_ZSH=true
   setopt ERR_EXIT PIPE_FAIL
 fi

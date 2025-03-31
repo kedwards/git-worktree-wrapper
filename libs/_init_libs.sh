@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Detect shell type
-if [ -n "$ZSH_VERSION" ]; then
+if [ -n "${ZSH_VERSION-}" ]; then
   LIBS_DIR="$(dirname "$(realpath "${(%):-%N}")")"
 else
   LIBS_DIR="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
